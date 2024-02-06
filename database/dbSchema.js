@@ -1,4 +1,5 @@
-import { Schema, model } from 'mongoose';
+const mongoose = require('mongoose');
+const { Schema, model } = mongoose;
 
 // define a schema for the booking model
 const bookingSchema = new Schema({
@@ -14,13 +15,18 @@ const userSchema = new Schema({
     firstName: String,
     middleName: String,
     lastName: String,
-    contactNumber: Number,
+    contactNumber: String,
     email: String
 });
 
 // create booking model using schema
-export const Booking = model('Booking', bookingSchema);
+const Booking = model('Booking', bookingSchema);
 
 // create user model using schema
-export const User = model('User', userSchema);
+const User = model('User', userSchema);
 
+// Export the User and Booking model to be used in other parts of the application
+module.exports = {
+    Booking,
+    User,
+};
