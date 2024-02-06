@@ -5,14 +5,12 @@ const router = express.Router();
 
 // Get request route to fetch all bookings
 router.get('/api/bookings', async (req, res) => {
-    // const { } = req.body;
-
-    // try {
+    try {
         
-    // } catch (error) {
-    //     console.error(error);
-    //     res.status(500).send('Error retrieving all bookings data');
-    // }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error retrieving all bookings data');
+    }
 });
 
 // Get request route to fetch specific booking
