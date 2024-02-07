@@ -67,7 +67,7 @@ router.get('/api/user/:email', async (req, res) => {
 
 // Post request route to save user
 router.post('/api/user', async (req, res) => {
-    const { firstName, middleName, lastName, contactNumber, email } = req.body;
+    const { firstName, middleName, lastName, contactNumber, email, password } = req.body;
 
     // Create a new instance of the User model with the provided data
     try {
@@ -76,7 +76,8 @@ router.post('/api/user', async (req, res) => {
             middleName: middleName,
             lastName: lastName,
             contactNumber: contactNumber,
-            email: email
+            email: email,
+            password: password
         })
 
         // Save the user data to the database

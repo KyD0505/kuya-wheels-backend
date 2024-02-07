@@ -16,7 +16,8 @@ const userSchema = new Schema({
     middleName: String,
     lastName: String,
     contactNumber: String,
-    email: String
+    email: String,
+    password: String,
 });
 
 // create booking model using schema
