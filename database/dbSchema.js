@@ -5,9 +5,9 @@ const { Schema, model } = mongoose;
 const bookingSchema = new Schema({
     appointmentDate: Date,
     courseTaken: String,
-    dateCreated: Date,
+    dateCreated: String,
     isPaid: Boolean,
-    datePaid: Date
+    datePaid: String
 });
 
 // define a schema for the user model
